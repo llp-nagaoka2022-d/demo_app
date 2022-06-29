@@ -16,19 +16,14 @@
   <!-- コンテンツ -->
   <div class="container mt-5" style="max-width: 700px;">
     <header class="border-bottom pb-2 mb-2 d-flex align-items-center">
-      <h1 class="fs-5 m-0">応募する内容の確認</h1>
+      <h1 class="fs-5 m-0">応募内容の確認</h1>
     </header>
 
-    <h3 class="fs-6">aaa株式会社</h3>
-    <h2 class="fs-3">機械学習エンジニア募集！！！</h2>
+    <h3 id="company-name" class="fs-6"></h3>
+    <h2 id="job-title" class="fs-3 ps-1"></h2>
 
-    <div class="mt-3 ms-3">
-      <i class="bi bi-currency-yen"></i> 時給 10,000円<br>
-      <i class="bi bi-shop"></i> 新潟県長岡市上富岡町
-    </div>
-
-    <div class="mt-3 ms-3">
-      <p>こんにちは　こんにちは　こんにちは　こんにちは　こんにちは　こんにちは　こんにちは　こんにちは<br>こんにちは　こんにちは　こんにちは　こんにちは　こんにちは　こんにちは　こんにちは　こんにちは</p>
+    <div class="pt-3 pb-3 ps-3 pe-3">
+      <span id="discriptions"></span>
     </div>
 
 
@@ -39,30 +34,27 @@
       <tbody>
         <tr>
           <th scope="row">雇用形態</th>
-          <td>アルバイト</td>
+          <td><span id="employment-status"></span></td>
         </tr>
         <tr>
           <th scope="row">シフト</th>
-          <td>週2日以上</td>
+          <td><span id="working-times"></span></td>
         </tr>
         <tr>
           <th scope="row">勤務地</th>
-          <td>新潟県長岡市上富岡町</td>
+          <td><span id="place"></span></td>
         </tr>
         <tr>
           <th scope="row">応募条件</th>
-          <td>Pythonによるプログラミング経験、TensorFlowによる機械学習構築の経験</td>
-        </tr>
-        <tr>
-          <th scope="row">場所 or 遠隔化</th>
-          <td>リモートワーク可能</td>
+          <td><span id="conditions"></span></td>
         </tr>
         <tr>
           <th scope="row">給与</th>
-          <td>時給10,000円</td>
+          <td><span id="salary"></span></td>
         </tr>
       </tbody>
     </table>
+
 
 
     <div class="border-bottom mt-5 pe-2 pb-2 mb-2 d-flex align-items-center">
@@ -169,6 +161,35 @@
       $("#header").load("header.html");
       $("#footer").load("footer.html");
     });
+
+    // クエリパラメータの取得
+    var paraGety = function paraGety(para) {
+      var pageURL = window.location.search.substring(1),
+        urlValue = pageURL.split('&'), paraName;
+      for (var i = 0; i < urlValue.length; i++) {
+        paraName = urlValue[i].split('=');
+        if (paraName[0] === para) {
+          return paraName[1] === undefined ? true : decodeURIComponent(paraName[1]);
+        }
+      }
+    };
+
+    // 各パラメーターの値を変数に格納
+    var company_id = paraGety('company');
+
+    // 各種条件の書き込み
+    if (company_id !== undefined) {
+      $.getJSON("./../database/companies.json", function (json) {
+        $("#company-name").text(json.datas[company_id].company_name);
+        $("#job-title").text(json.datas[company_id].job_title);
+        $("#employment-status").text(json.datas[company_id].employment_status);
+        $("#working-times").text(json.datas[company_id].working_times);
+        $("#place").text(json.datas[company_id].place);
+        $("#conditions").text(json.datas[company_id].conditions);
+        $("#salary").text(json.datas[company_id].salary);
+        $("#discriptions").text(json.datas[company_id].discriptions);
+      });
+    }
   </script>
 </body>
 
