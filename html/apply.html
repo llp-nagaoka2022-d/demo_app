@@ -99,10 +99,16 @@
 
 
     <div class="border-bottom mt-5 pe-2 pb-2 mb-2 d-flex align-items-center">
-      <h1 class="fs-5 m-0">シフトの希望日</h1>
+      <h1 class="fs-5 m-0">シフトの希望</h1>
       <button type="button" class="btn btn-outline-secondary btn-sm ms-auto">
         <i class="bi bi-pencil me-1"></i>編集
       </button>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">シフトの希望を記入してください</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+        placeholder="平日は19時以降の3時間，休日は13時以降の5時間を希望します．"></textarea>
     </div>
 
     <div class="border-bottom mt-5 pe-2 pb-2 mb-2 d-flex align-items-center">
@@ -111,6 +117,28 @@
         <i class="bi bi-pencil me-1"></i>編集
       </button>
     </div>
+
+    <form>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">第一希望</label>
+        <div class="col-sm-10">
+          <input class="form-control" placeholder="8/1 17時から">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">第二希望</label>
+        <div class="col-sm-10">
+          <input class="form-control">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">第三希望</label>
+        <div class="col-sm-10">
+          <input class="form-control">
+        </div>
+      </div>
+    </form>
+
 
     <div class="mt-5">
       応募の際には<a href="">ご利用規約</a>及び<a href="">プライバシーポリシー</a>への同意が必要です。
