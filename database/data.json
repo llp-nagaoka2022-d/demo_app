@@ -1,0 +1,34 @@
+{
+    "datas": [
+        {
+            "company_name": "AAA株式会社",
+            "job_title": "機械学習エンジニア募集！！！",
+            "employment_status": "アルバイト",
+            "working_times": "週2日以上",
+            "place": "新潟県長岡市",
+            "conditions": "Pythonによるプログラミング経験、TensorFlowによる機械学習構築の経験",
+            "salary": "時給10,000円",
+            "discriptions": "アットホームな職場です．"
+        },
+        {
+            "company_name": "BBB株式会社",
+            "job_title": "デザイナー",
+            "employment_status": "アルバイト",
+            "working_times": "週1日以上",
+            "place": "岩手県一関市",
+            "conditions": "いろんな経験",
+            "salary": "時給5,000円",
+            "discriptions": "アットホームな職場です．"
+        },
+        {
+            "company_name": "CCC株式会社",
+            "job_title": "機械設計業務",
+            "employment_status": "アルバイト",
+            "working_times": "週1日以上",
+            "place": "奈良県大和郡山市",
+            "conditions": "強靭な肉体",
+            "salary": "時給1,000円",
+            "discriptions": "アットホームな職場です．"
+        }
+    ]
+}
