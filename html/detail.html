@@ -73,9 +73,23 @@
       $("#footer").load("footer.html");
     });
 
+    // クエリパラメータの取得
+    var paraGety = function paraGety(para) {
+      var pageURL = window.location.search.substring(1),
+        urlValue = pageURL.split('&'), paraName;
+      for (var i = 0; i < urlValue.length; i++) {
+        paraName = urlValue[i].split('=');
+        if (paraName[0] === para) {
+          return paraName[1] === undefined ? true : decodeURIComponent(paraName[1]);
+        }
+      }
+    };
+
+    // 各パラメーターの値を変数に格納
+    var company_id = paraGety('company');
+
     // 各種条件の書き込み
-    var company_id = 0;
-    $.getJSON("./../database/data.json", function (json) {
+    $.getJSON("./../database/companies.json", function (json) {
       $("#company-name").text(json.datas[company_id].company_name);
       $("#job-title").text(json.datas[company_id].job_title);
       $("#employment-status").text(json.datas[company_id].employment_status);
@@ -84,7 +98,8 @@
       $("#conditions").text(json.datas[company_id].conditions);
       $("#salary").text(json.datas[company_id].salary);
       $("#discriptions").text(json.datas[company_id].discriptions);
-    })
+    });
+
   </script>
 </body>
 
