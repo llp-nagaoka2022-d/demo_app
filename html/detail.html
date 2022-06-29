@@ -54,8 +54,9 @@
 
     <!-- 応募ボタン -->
     <div class="mt-5 d-grid gap-2">
-      <button type="button" class="btn btn-outline-secondary" style="max-width: 200px; margin: 0 auto;"
-        onclick="location.href='apply.html'">応募する</button>
+      <a id="submit-button" href="apply.html" style="margin: 0 auto; max-width: 200px;">
+        <button type="button" class="btn btn-outline-secondary">応募する</button>
+      </a>
     </div>
   </div>
 
@@ -99,6 +100,12 @@
       $("#salary").text(json.datas[company_id].salary);
       $("#discriptions").text(json.datas[company_id].discriptions);
     });
+
+    // hrefリンクに今のクエリを追加する
+    var paramstr = document.location.search;
+    $("a").attr("href",
+      $("a").attr('href') + paramstr
+    );
 
   </script>
 </body>
