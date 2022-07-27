@@ -33,7 +33,7 @@
   </style>
 </head>
 
-<body style="background-color: #eee;">
+<body style="background-color: #999; padding-top: 5rem;">
   <header id="header"></header>
   <div id="content-list"></div>
   <header id="footer"></header>
@@ -61,7 +61,7 @@
     $.getJSON("./../database/companies.json", function (json) {
       var html_content = "";
       for (let i = 0; i < 3; ++i) {
-        html_content += '<div class="container mt-5"\><div class="container shadow p-3 mb-5 bg-body rounded linkbox" style = "max-width: 700px;"\><a id="company-button-2" href = "detail.html?company=2"></a\>\<h3 class="fs-6" >' + json.datas[i].company_name + '</h2\><h2 class="fs-3">' + json.datas[i].job_title + '</h2\><div class="mt-3 ms-3"\><i class="bi bi-currency-yen pe-1"></i>' + json.datas[i].salary + '<br\><i class="bi bi-shop pe-1"></i>' + json.datas[i].place + '</div\><div class="mt-3 ms-3"\><p>' + json.datas[i].discriptions + '</p\></div\></div\></div\>';
+        html_content += '<div class="container mt-5"\><div class="container shadow p-3 mb-5 bg-body rounded linkbox" style = "max-width: 700px;"\><a id="company-button-2" href = "detail.html?company=2"></a\>\<h3 class="fs-3" >' + json.datas[i].company_name + '</h2\><h2 class="fs-1">' + json.datas[i].job_title + '</h2\><div class="mt-3 ms-3 fs-2"\><i class="bi bi-currency-yen pe-1"></i>' + json.datas[i].salary + '<br\><i class="bi bi-shop pe-1"></i>' + json.datas[i].place + '</div\><div class="mt-3 ms-3 fs-2"\><p>' + json.datas[i].discriptions + '</p\></div\></div\></div\>';
       }
       $("#content-list").html(html_content);
     });

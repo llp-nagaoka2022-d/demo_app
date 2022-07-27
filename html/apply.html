@@ -10,57 +10,39 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 </head>
 
-<body style="background-color: #eee;">
+<body style="background-color: #eee; padding-top: 5rem;">
   <header id="header"></header>
 
   <!-- コンテンツ -->
   <div class="container mt-5" style="max-width: 700px;">
-    <header class="border-bottom pb-2 mb-2 d-flex align-items-center">
-      <h1 class="fs-5 m-0">応募内容の確認</h1>
+    <!-- 条件の表 -->
+    <div id="company-name" class="fs-4"></div>
+    <header class="pb-2 mb-5 d-flex align-items-center">
+      <h1 id="job-title" class="fs-1 ms-2"></h1>
     </header>
 
-    <h3 id="company-name" class="fs-6"></h3>
-    <h2 id="job-title" class="fs-3 ps-1"></h2>
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">雇用形態</div>
+    <div id="employment-status" class="fs-4 ms-3"></div>
 
-    <div class="pt-3 pb-3 ps-3 pe-3">
-      <span id="discriptions"></span>
-    </div>
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">シフト</div>
+    <div id="working-times" class="fs-4 ms-3"></div>
 
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">勤務地</div>
+    <div id="place" class="fs-4 ms-3"></div>
 
-    <!-- 条件の表 -->
-    <table class="table table-striped table-bordered">
-      <thead>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">雇用形態</th>
-          <td><span id="employment-status"></span></td>
-        </tr>
-        <tr>
-          <th scope="row">シフト</th>
-          <td><span id="working-times"></span></td>
-        </tr>
-        <tr>
-          <th scope="row">勤務地</th>
-          <td><span id="place"></span></td>
-        </tr>
-        <tr>
-          <th scope="row">応募条件</th>
-          <td><span id="conditions"></span></td>
-        </tr>
-        <tr>
-          <th scope="row">給与</th>
-          <td><span id="salary"></span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">応募条件</div>
+    <div id="conditions" class="fs-4 ms-3"></div>
 
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">給与</div>
+    <div id="salary" class="fs-4 ms-3"></div>
 
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">詳細</div>
+    <div id="discriptions" class="fs-5 ms-3"></div>
 
-    <div class="border-bottom mt-5 pe-2 pb-2 mb-2 d-flex align-items-center">
-      <h1 class="fs-5 m-0">ユーザー情報</h1>
+    <div class="border-bottom border-3  ms-1 me-1 mt-5 mb-2 d-flex align-items-center">
+      <div class="fs-3">あなたの情報</div>
       <button type="button" class="btn btn-outline-secondary btn-sm ms-auto">
-        <i class="bi bi-pencil me-1"></i>編集
+        <i class="bi bi-pencil"></i>編集
       </button>
     </div>
 
@@ -70,63 +52,58 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">現在の職業</th>
-          <td>大学院生</td>
+          <th class="fs-5" scope="row">現在の職業</th>
+          <td class="fs-5">大学院生</td>
         </tr>
         <tr>
-          <th scope="row">生年月日</th>
-          <td>1999年09月24日</td>
+          <th class="fs-5" scope="row">生年月日</th>
+          <td class="fs-5">1999年09月24日</td>
         </tr>
         <tr>
-          <th scope="row">電話番号</th>
-          <td>080********</td>
+          <th class="fs-5" scope="row">電話番号</th>
+          <td class="fs-5">080********</td>
         </tr>
         <tr>
-          <th scope="row">名前</th>
-          <td>山田太郎</td>
+          <th class="fs-5" scope="row">名前</th>
+          <td class="fs-5">山田太郎</td>
         </tr>
         <tr>
-          <th scope="row">ふりがな</th>
-          <td>やまだたろう</td>
+          <th class="fs-5" scope="row">ふりがな</th>
+          <td class="fs-5">やまだたろう</td>
         </tr>
         <tr>
-          <th scope="row">性別</th>
-          <td>男性</td>
+          <th class="fs-5" scope="row">性別</th>
+          <td class="fs-5">男性</td>
         </tr>
       </tbody>
     </table>
 
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">シフトの希望</div>
 
-
-    <div class="border-bottom mt-5 pe-2 pb-2 mb-2 d-flex align-items-center">
-      <h1 class="fs-5 m-0">シフトの希望</h1>
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">シフトの希望を記入してください</label>
+    <div class="ms-3 me-3 mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label fs-5">シフトの希望を記入してください</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
         placeholder="平日は19時以降の3時間，休日は13時以降の5時間を希望します．"></textarea>
     </div>
 
-    <div class="border-bottom mt-5 pe-2 pb-2 mb-2 d-flex align-items-center">
-      <h1 class="fs-5 m-0">面接の希望日</h1>
-    </div>
 
-    <form>
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">面接の希望日</div>
+
+    <form class="ms-3 me-3">
       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">第一希望</label>
+        <label class="col-sm-2 col-form-label fs-5">第一希望</label>
         <div class="col-sm-10">
           <input class="form-control" placeholder="8/1 17時から">
         </div>
       </div>
       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">第二希望</label>
+        <label class="col-sm-2 col-form-label fs-5">第二希望</label>
         <div class="col-sm-10">
           <input class="form-control">
         </div>
       </div>
       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">第三希望</label>
+        <label class="col-sm-2 col-form-label fs-5">第三希望</label>
         <div class="col-sm-10">
           <input class="form-control">
         </div>
@@ -134,14 +111,14 @@
     </form>
 
 
-    <div class="mt-5">
+    <div class="mt-5 fs-5">
       応募の際には<a href="">ご利用規約</a>及び<a href="">プライバシーポリシー</a>への同意が必要です。
     </div>
 
     <!-- 応募ボタン -->
     <div class="mt-5 d-grid gap-2">
-      <a id="submit-button" href="index.html" style="margin: 0 auto; max-width: 200px;">
-        <button type="button" class="btn btn-outline-secondary">同意して応募する</button>
+      <a id="submit-button" href="index.html" style="margin: 0 auto; max-width: 400px;">
+        <button type="button" class="btn btn-secondary fs-1">同意して応募する</button>
       </a>
     </div>
   </div>
