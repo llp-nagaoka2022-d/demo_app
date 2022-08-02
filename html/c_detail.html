@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>demo_app</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+</head>
+
+<body style="background-color: #eee; padding-top: 5rem;">
+  <header id="header"></header>
+
+  <!-- コンテンツ -->
+  <div class="container mt-5" style="max-width: 700px;">
+    <div id="company-name" class="fs-4"></div>
+    <header class="pb-2 mb-5 d-flex align-items-center">
+      <h1 id="job-title" class="fs-1 ms-2"></h1>
+    </header>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">名前</div>
+    <div id="student-name" class="fs-4 ms-3"></div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">スキルの概要</div>
+    <div id="skil-summary" class="fs-4 ms-3"></div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">勤務希望地</div>
+    <div id="adress" class="fs-4 ms-3"></div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">学校</div>
+    <div id="school" class="fs-4 ms-3"></div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">キーワード</div>
+    <div class="fs-4 ms-3">画像処理、ロボット、IoT、AI、信号処理、統計学、機械学習</div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">自己紹介</div>
+    <div class="fs-4 ms-3">
+      長岡技術科学大学大学院工学専攻1年の斎藤一郎と申します。<br>
+      私は、高専の1年生から現在までロボットの競技会に参加するサークルに所属しており、そこでの活動を通して、ものづくりの難しさや楽しさ、時には辛さといった魅力を肌で感じてきました。<br>
+      私は、これまで取り組んできたロボット作りの経験を活かしてアルバイトをしたいと考えています。
+    </div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">スキル</div>
+    <div class="fs-4 ms-3">
+      <ul>
+        <li>Pythonの基本的なコーディング</li>
+        <li>C++の基本的なコーディング/ライブラリ作製・保守</li>
+        <li>PyTorchを用いた畳み込みニューラルネットワークの実装</li>
+        <li>mbedを用いた組み込みプログラミング経験</li>
+      </ul>
+    </div>
+
+    <div class="fs-3 ms-1 me-1 border-bottom border-3 mt-5">実績・成果物</div>
+    <div class="fs-4 ms-3">
+      私が学生時代に最も力を入れて作成したものはロボコンに出場したロボットのプログラムになります。<br>
+
+      このプロジェクトで私は以下のような成果物を作成しました。<br>
+      <ul>
+        <li>2次元レーザセンサと走行距離計をカルマンフィルタで合成し、ロボットの自己位置を推定するアルゴリズム</li>
+        <li>ダイクストラ法とDynamic Window Approachによるロボットの動的な経路生成アルゴリズム</li>
+        <li>モデル予測を用いた自動走行の制御器</li>
+        <li>k-meansとhough変換による2次元レーザセンサを用いた的の検出アルゴリズム</li>
+        <li>ロボットのCANバスとPCのシリアルバスを接続する通信モジュール</li>
+        <li>ロボットのログ（状態遷移、走行速度、車輪の滑り角、投擲精度など）を分析・評価するGUIアプリケーション</li>
+        <li>実機がなくても動作するアルゴリズム検証用のロボットのシミュレータ</li>
+      </ul>
+    </div>
+
+
+
+    <!-- 応募ボタン -->
+    <div class="mt-5 mb-5 d-grid gap-2">
+      <a id="submit-button" href="c_offer.html" style="margin: 0 auto; max-width: 400px;">
+        <button type="button" class="btn btn-secondary fs-1">オファーを送る</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- <header id="footer"></header> -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!-- <script>
+    //共通パーツ読み込み
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    }); -->
+  <!-- </script> -->
+  <script type="text/javascript" src="../script/util.js"></script>
+</body>
+
+</html>

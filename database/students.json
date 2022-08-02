@@ -1,0 +1,60 @@
+{
+    "datas": [
+        {
+            "name": "斎藤一郎",
+            "skil_summary": "画像処理",
+            "adress": "新潟県長岡市",
+            "school": "長岡技術科学大学",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "遠藤花子",
+            "skil_summary": "機械学習・深層学習",
+            "adress": "新潟県長岡市",
+            "school": "長岡技術科学大学",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "加藤次郎",
+            "skil_summary": "画像処理の研究",
+            "adress": "新潟県長岡市",
+            "school": "長岡技術科学大学",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "佐藤三郎",
+            "skil_summary": "ニューラルネットワーク",
+            "adress": "新潟県見附市",
+            "school": "長岡技術科学大学",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "工藤四郎",
+            "skil_summary": "3DCGの作製",
+            "adress": "新潟県",
+            "school": "",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "須藤太郎",
+            "skil_summary": "画像処理（異常検知）",
+            "adress": "新潟県",
+            "school": "",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "後藤五郎",
+            "skil_summary": "画像処理",
+            "adress": "新潟県",
+            "school": "",
+            "skil_discription": "アルバイト"
+        },
+        {
+            "name": "伊藤六郎",
+            "skil_summary": "画像作成",
+            "adress": "新潟県",
+            "school": "",
+            "skil_discription": "アルバイト"
+        }
+    ]
+}
