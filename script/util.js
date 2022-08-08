@@ -40,6 +40,7 @@ function setQuery(company_id, applied) {
 
 // 各パラメーターの値を変数に格納
 var company_id = paraGety('company');
+var student_id = paraGety('students');
 
 // 各種条件の書き込み
 if (company_id !== undefined) {
@@ -52,5 +53,15 @@ if (company_id !== undefined) {
         $("#conditions").text(json.datas[company_id].conditions);
         $("#salary").text(json.datas[company_id].salary);
         $("#discriptions").text(json.datas[company_id].discriptions);
+    });
+}
+
+if (student_id !== undefined) {
+    $.getJSON("./../database/students.json", function (json) {
+        $("#student-name").text(json.datas[student_id].name);
+        $("#skil-summary").text(json.datas[student_id].skil_summary);
+        $("#adress").text(json.datas[student_id].adress);
+        $("#school").text(json.datas[student_id].school);
+        $("#skil-discription").text(json.datas[student_id].skil_discription);
     });
 }
